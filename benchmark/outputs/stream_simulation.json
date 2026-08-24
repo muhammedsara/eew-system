@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-02-09T20:56:44.846895",
+  "config": {
+    "duration_seconds": 600,
+    "n_earthquakes": 10,
+    "trigger_threshold": 0.5,
+    "consensus_windows": 3
+  },
+  "results": {
+    "true_positives": 10,
+    "false_positives": 5,
+    "false_negatives": 0,
+    "precision": 0.6666666662222221,
+    "recall": 0.9999999989999999,
+    "avg_latency": 2.66,
+    "detection_latencies": [
+      1.98,
+      2.5,
+      2.66,
+      3.82,
+      2.16,
+      2.42,
+      2.5,
+      3.38,
+      3.5,
+      1.68
+    ]
+  }
+}

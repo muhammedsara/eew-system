@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: >-
+  Reducing false alarms in crowd-sourced earthquake early warning via hybrid
+  edge intelligence
+message: >-
+  The paper describing this system is currently under review. Until it appears,
+  please cite this software entry.
+type: software
+version: '1.0'
+date-released: '2026-08-24'
+authors:
+  - family-names: Şara
+    given-names: Muhammed
+    affiliation: Kocaeli University
+  - family-names: Eken
+    given-names: Süleyman
+    affiliation: Kocaeli University
+  - family-names: Atay
+    given-names: Yılmaz
+    affiliation: Gazi University
+  - family-names: Kahveci
+    given-names: Tamer
+    affiliation: University of Florida
+license: MIT
+repository-code: 'https://github.com/muhammedsara/eew-system'
+abstract: >-
+  A crowd-sourced earthquake early warning system that fuses a dense population
+  of consumer smartphones with a sparse grid of fixed IoT anchors. Each sensor
+  runs a 188 KiB INT8 CNN locally and transmits an 87-byte authenticated digest;
+  a regional gateway applies a six-phase weighted spatio-temporal consensus that
+  tests inter-sensor delay against inter-sensor distance and weights each sensor
+  by the reliability it demonstrates in the field. The repository contains the
+  protocol, the deployed detector and the full evaluation pipeline, so that every
+  published number can be reproduced from a clone.
+keywords:
+  - earthquake early warning
+  - edge intelligence
+  - sensor fusion
+  - distributed consensus
+  - spatio-temporal graph
+  - sensor reliability
+  - crowdsensing

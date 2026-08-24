@@ -1,0 +1,101 @@
+{
+  "groups": [
+    {
+      "group": "framing",
+      "fields": [
+        {
+          "name": "Protocol version",
+          "bytes": 1
+        },
+        {
+          "name": "Message type",
+          "bytes": 1
+        },
+        {
+          "name": "Sequence number",
+          "bytes": 2
+        },
+        {
+          "name": "Rotating device token (SHA-256 prefix)",
+          "bytes": 8
+        }
+      ]
+    },
+    {
+      "group": "space-time stamp",
+      "fields": [
+        {
+          "name": "Latitude, 1.1 km grid (int32)",
+          "bytes": 4
+        },
+        {
+          "name": "Longitude, 1.1 km grid (int32)",
+          "bytes": 4
+        },
+        {
+          "name": "Trigger onset time, ms UTC (int64)",
+          "bytes": 8
+        },
+        {
+          "name": "Clock-quality flag",
+          "bytes": 1
+        },
+        {
+          "name": "Device class + calibration level",
+          "bytes": 1
+        }
+      ]
+    },
+    {
+      "group": "detector output",
+      "fields": [
+        {
+          "name": "Binary decision",
+          "bytes": 1
+        },
+        {
+          "name": "Detector confidence (uint8, 1/255)",
+          "bytes": 1
+        },
+        {
+          "name": "Peak ground acceleration (float16, g)",
+          "bytes": 2
+        },
+        {
+          "name": "STA/LTA ratio at trigger (uint8)",
+          "bytes": 1
+        },
+        {
+          "name": "Model version",
+          "bytes": 2
+        },
+        {
+          "name": "Battery / health status",
+          "bytes": 1
+        },
+        {
+          "name": "Reserved for extensions",
+          "bytes": 3
+        }
+      ]
+    },
+    {
+      "group": "authenticated encryption",
+      "fields": [
+        {
+          "name": "AEAD nonce",
+          "bytes": 12
+        },
+        {
+          "name": "AEAD authentication tag",
+          "bytes": 16
+        },
+        {
+          "name": "Anchor signature prefix (Ed25519)",
+          "bytes": 18
+        }
+      ]
+    }
+  ],
+  "total_bytes": 87
+}
